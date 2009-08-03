@@ -6,9 +6,6 @@ class a_node {
   friend std::ostream& operator<<(std::ostream&, const a_node&);
 
 public:
-  std::string s;
-  char c;
-
   a_node(std::string s, char c) : s(s), c(c) {
   }
 
@@ -20,10 +17,14 @@ protected:
     os << "(" << s << ", " << (c ? std::string(1, c) : "null") << ")";
     return os;
   }
+
+private:
+	std::string s;
+	char c;
+
 };
 
-std::ostream&
-operator<<(std::ostream& os, const a_node& an)
+std::ostream& operator<<(std::ostream& os, const a_node& an)
 {
   return an.printit(os);
 }
@@ -82,3 +83,44 @@ operator<<(std::ostream& os, const binary_tree& t)
 {
   return t.printit(os);
 }
+//Class for creating Linked List//Dipal
+
+//Callses for Lattice is in file Lattice.h
+struct MyNode{
+        char func1[100];
+        char var;
+        int level;
+        int NodeNumber;
+        //int ParentNodeNumber;
+             };
+
+struct LatticeNode{
+       MyNode data;
+       LatticeNode *next;
+};
+
+class Lattice{
+
+private:
+        MyNode *AllMyNode;
+        LatticeNode *head, *head1, *next, *current, *previous;
+
+public:
+        Lattice();
+        ~Lattice();
+
+void CreateLL(char *func, char &v, int &L, int &NN);
+void Printit();
+void FindHighestLevel(char *myVars);
+      };
+
+//Initialization of LinkedList
+Lattice::Lattice()
+{
+head = NULL;
+}
+
+Lattice::~Lattice()
+{
+}
+

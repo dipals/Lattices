@@ -2,7 +2,6 @@
 //This program will create a positive and a negative cofactors for PPRM expression//
 //1. Pass array by eference in this program                                       //
 ////////////////////////////////////////////////////////////////////////////////////
-
 //Callses for Lattice is in file Lattice.h
 
 char *PositiveCofactor (char *func1, char& var1)
@@ -39,20 +38,35 @@ char *PositiveCofactor (char *func1, char& var1)
 	
 	for (int z=0; func2[z] != '\0';)
 	{
-	 if (func2[z] == '@')
+         if ((z == 0) && (func2[z+1] == '@') && (func2[z] == '1'))
+         {
+          MyFunc [n] [w] = func2[z];
+          //cout <<"1: "<< MyFunc [n] [w]<<n<<"---"<<w<<endl;
+          ++z;
+          ++w;
+          }
+	 else if ((z != 0) && (func2[z] == '@'))
 	 {
 		 MyFunc [n] [w] = '\0';
 		 ++n;
 		// cout <<"Number of @ is: "<<n<<endl;
 		 w = 0;
 	 }
+	 else if ((z != 0) && (func2[z] == '1') && (func2[z-1] == '@') && ((func2[z+1] == '@') || (func2[z+1] == '\0')))
+         {
+          MyFunc [n] [w] = func2[z];
+          //cout <<"2: "<< MyFunc [n] [w] <<n<<"---"<<w<<endl;
+          ++w;
+          ++z;
+                }
 	 else if (func2[z] != '1')
 	 {
 	  MyFunc [n] [w] = func2 [z];
-		 ++w;
+          //cout <<"3: "<< MyFunc [n] [w]<<n<<"---"<<w<<endl;
+	  ++w;
 		// cout <<"Number of minterms are: "<<w<<endl;
 		}
-		++z;
+	  ++z;
 	}
 	MyFunc [n] [w] = '\0';
 	
@@ -62,26 +76,25 @@ char *PositiveCofactor (char *func1, char& var1)
 
 	for (int i=0; i<k+1; )
 	{
-		for (int u=0; MyFunc [i] [u] != '\0'; ++u)
-		{
+	       for (int u=0; MyFunc [i] [u] != '\0'; ++u)
+	       {
 	         //cout << MyFunc [i] [u];
 	         func4 [m] = MyFunc [i] [u];
                  ++m;
 		}
 		++i;
-		//cout <<"@";
-		func4 [m] = '@';
+                if (i < k+1)
+                {
+                func4 [m] = '@';
+                ++m;
+                 }
+                else 
                 ++m;
 	}
         func4 [m] = '\0';
 
-        //cout <<endl;
-        //strcpy (func2, func4);
-        //cout <<"MY FUNC4: "<<func4<<endl;
-
-        return func4;
-
         //cout <<"My final Positive Cofactor of the function is: "<<func4<<endl;
+        return func4;
 
 }//end function PositiveCofactor
 
@@ -197,14 +210,16 @@ char *NegativeCofactor (char *func3, char& var3)
                      ++m;
                    }
 		}
-		//cout <<"@";
-                func5 [m] = '@';
 		++i;
+                if (i < k)
+                {
+                func5 [m] = '@';
                 ++m;
+                   }
+               // else
+                //++m;
 	}
         func5 [m] = '\0';
-	//cout <<endl;
-        //cout <<"MY NCF: "<<func5<<endl;
 
         return func5;
 }

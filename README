@@ -1,0 +1,6 @@
+Implementation tasks
+--------------------
+
+1. Read the function
+2. Compute number of min-terms and number of variables in the functions
+3. Compute positive cofactor and negative cofactor of the function
