@@ -1,3 +1,3 @@
 README
 
-Lattices is a software developed in C++ to create Shannon Lattice Diagram for any Boolean logic function. The development work is still in progress and later version of the software will also create Positive Davio and Negative Davio Lattices.   
+Lattices is a software developed in C++ to create Shannon Lattice Diagram for any Boolean logic function. The development work is still in progress and later version of the software will also create Positive Davio and Negative Davio Lattices. Please read BuildInstruction to compile and run this software.   

@@ -1,6 +1,9 @@
 BUILD AND RUN INSTRUCTONS
 
-Please download the software from the link on Github and copy in your Unix area. You might have to change permissions of these files. Just run BuildLattice, this will create output file Lattice.out. Running Lattice.out will prompt you to enter PPRM (positive polarity Reed-Muller) function as well as list of variables for the function. Examples of PPRM functions and corresponding variables are shown below. The “@” sign represents EXOR operation.
+Please download the software from the link on Github and copy in your Unix area. You might have to change permissions of these files. 
+Just run BuildLattice, this will create output file Lattice.out. Running Lattice.out will prompt you to enter PPRM (positive polarity Reed-Muller)
+function as well as list of variables for the function. Examples of PPRM functions and corresponding variables are shown below. 
+The “@” sign represents EXOR operation.
 
 1. PPRM function: abc@c
 Variable list: abc
