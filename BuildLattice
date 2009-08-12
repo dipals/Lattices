@@ -1,0 +1,1 @@
+g++ main.cpp Cofactors.cpp -o Lattice.out

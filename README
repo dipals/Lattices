@@ -1,6 +1,3 @@
-Implementation tasks
---------------------
+README
 
-1. Read the function
-2. Compute number of min-terms and number of variables in the functions
-3. Compute positive cofactor and negative cofactor of the function
+Lattices is a software developed in C++ to create Shannon Lattice Diagram for any Boolean logic function. The development work is still in progress and later version of the software will also create Positive Davio and Negative Davio Lattices.   

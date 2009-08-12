@@ -78,7 +78,7 @@ return 0;
 
 //This file implements CreateLL and PrintLL functions//
 
-void Lattice::CreateLL(char *func, char &v, int &l, int &NN)
+void Lattice::CreateLL(char *func, char &v, int l, int NN)
 {
 Lattice obj;
 LatticeNode *temp, *temp2;

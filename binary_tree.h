@@ -109,7 +109,7 @@ public:
         Lattice();
         ~Lattice();
 
-void CreateLL(char *func, char &v, int &L, int &NN);
+void CreateLL(char *func, char &v, int L, int N);
 void Printit();
 void FindHighestLevel(char *myVars);
       };
