@@ -1,8 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////////
 //This program will create a positive and a negative cofactors for PPRM expression//
-//1. Pass array by eference in this program                                       //
+//1. Pass array by eference in this program                                      //
+//This is a final submission version                                             //
 ////////////////////////////////////////////////////////////////////////////////////
-//Callses for Lattice is in file Lattice.h
 
 char *PositiveCofactor (char *func1, char& var1)
 {

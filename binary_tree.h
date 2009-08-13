@@ -1,5 +1,5 @@
 // -*- C++ -*-
-
+//This is a final submission version//
 #include <iostream>
 
 class a_node {
@@ -111,7 +111,8 @@ public:
 
 void CreateLL(char *func, char &v, int L, int N);
 void Printit();
-void FindHighestLevel(char *myVars);
+void CreateNewLevel(char *myVars, int i);
+int FindHighestLelvel();
       };
 
 //Initialization of LinkedList
